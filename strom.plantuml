@@ -1,0 +1,43 @@
+@startuml
+skinparam state {
+  BackgroundColor White
+  BorderColor Black
+  FontSize 12
+}
+
+' Vrchol Definitions
+state "Vrchol 1\nH: 23.6921\n[B1: 0.36000, B2: 0.34667, B3: 0.29333]\nFrekvencia: 1\n<b>Atribút: A2</b>\nH Podmienené: 23.32592\nI Podmienené: 0.36618" as N1
+state "Vrchol 2\nH: 4.92977\n[B1: 0.22500, B2: 0.35625, B3: 0.41875]\nFrekvencia: 0.21333\n<b>Atribút: A1</b>\nH Podmienené: 4.84006\nI Podmienené: 0.08971" as N2
+state "Vrchol 5\nH: 8.51761\n[B1: 0.38727, B2: 0.38182, B3: 0.23091]\nFrekvencia: 0.36667\n<b>Atribút: A1</b>\nH Podmienené: 8.32904\nI Podmienené: 0.18856" as N5
+state "Vrchol 10\nH: 9.87855\n[B1: 0.40476, B2: 0.31111, B3: 0.28413]\nFrekvencia: 0.42\n<b>Atribút: A3</b>\nH Podmienené: 9.83535\nI Podmienené: 0.0432" as N10
+state "Vrchol 3\nH: 2.95221\n[B1: 0.20202, B2: 0.30404, B3: 0.49394]\nFrekvencia: 0.132\n<b>Atribút: -</b>\nH Podmienené: 0\nI Podmienené: 0" as N3
+state "Vrchol 4\nH: 1.88784\n[B1: 0.26230, B2: 0.44098, B3: 0.29672]\nFrekvencia: 0.08133\n<b>Atribút: -</b>\nH Podmienené: 0\nI Podmienené: 0" as N4
+state "Vrchol 6\nH: 3.57949\n[B1: 0.31504, B2: 0.34469, B3: 0.34027]\nFrekvencia: 0.15067\n<b>Atribút: -</b>\nH Podmienené: 0\nI Podmienené: 0" as N6
+state "Vrchol 7\nH: 4.74955\n[B1: 0.43765, B2: 0.40772, B3: 0.15463]\nFrekvencia: 0.216\n<b>Atribút: A3</b>\nH Podmienené: 4.71992\nI Podmienené: 0.02963" as N7
+state "Vrchol 11\nH: 5.3265\n[B1: 0.41496, B2: 0.27214, B3: 0.31290]\nFrekvencia: 0.22733\n<b>Atribút: A1</b>\nH Podmienené: 5.2169\nI Podmienené: 0.1096" as N11
+state "Vrchol 14\nH: 4.50885\n[B1: 0.39273, B2: 0.35709, B3: 0.25017]\nFrekvencia: 0.19267\n<b>Atribút: -</b>\nH Podmienené: 0\nI Podmienené: 0" as N14
+state "Vrchol 8\nH: 2.03036\n[B1: 0.38335, B2: 0.42091, B3: 0.19574]\nFrekvencia: 0.08927\n<b>Atribút: -</b>\nH Podmienené: 0\nI Podmienené: 0" as N8
+state "Vrchol 9\nH: 2.68956\n[B1: 0.47591, B2: 0.39842, B3: 0.12567]\nFrekvencia: 0.12673\n<b>Atribút: -</b>\nH Podmienené: 0\nI Podmienené: 0" as N9
+state "Vrchol 12\nH: 1.59073\n[B1: 0.29769, B2: 0.24364, B3: 0.45867]\nFrekvencia: 0.0692\n<b>Atribút: -</b>\nH Podmienené: 0\nI Podmienené: 0" as N12
+state "Vrchol 13\nH: 3.62617\n[B1: 0.46627, B2: 0.28461, B3: 0.24911]\nFrekvencia: 0.15813\n<b>Atribút: -</b>\nH Podmienené: 0\nI Podmienené: 0" as N13
+
+' Connections with "B" labels
+N1 --> N2 : B1
+N1 --> N5 : B2
+N1 --> N10 : B3
+
+N2 --> N3 : B1
+N2 --> N4 : B2
+
+N5 --> N6 : B1
+N5 --> N7 : B2
+
+N7 --> N8 : B1
+N7 --> N9 : B2
+
+N10 --> N11 : B1
+N10 --> N14 : B2
+
+N11 --> N12 : B1
+N11 --> N13 : B2
+@enduml
